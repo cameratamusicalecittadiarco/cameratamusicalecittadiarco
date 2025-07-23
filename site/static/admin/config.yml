@@ -3,7 +3,9 @@ local_backend: true
 # to start local decap server: npx decap-server
 
 backend:
-  name: test-repo
+  name: git-gateway
+  repo: https://github.com/cameratamusicalecittadiarco/cameratamusicalecittadiarco.git # The repository where the content is stored
+  branch: main
 
 media_folder: "/site/static/img" # Folder where user uploaded files should go
 public_folder: "/img"
