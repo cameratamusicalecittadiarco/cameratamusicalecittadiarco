@@ -1,0 +1,21 @@
+{{ define "main" }}
+
+    {{ partial "jumbotron" (dict "imageUrl" .Params.image "title" .Title "subtitle" "" ) }}
+
+    <div class="mw7 center ph3 pv4">
+        
+        <!-- <h1 class="f2 lh-title b mb3">{{.Title}}</h1> -->
+        
+        <div class="flex justify-between grey-3">
+            {{ if and (.Params.start) (.Params.end) }}
+                <p>{{ (time.AsTime .Params.start).Format "January 2006" }} - {{ (time.AsTime .Params.end).Format "January 2006" }}</p>
+            {{ end }}
+        </div>
+        
+        <div class="cms">
+            {{ .Content }}
+        </div>
+
+    </div>
+
+{{ end }}

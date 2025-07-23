@@ -1,0 +1,23 @@
+{{ define "main" }}
+
+    {{ partial "jumbotron" (dict "imageUrl" .Params.image "title" .Title "subtitle" "stagione") }}
+
+    <div class="ph3 pv4 mw7 center">
+        
+            <ul id="blog-list" class="flex-ns flex-wrap mhn1-ns pa3">
+        
+                {{ range .Pages }}
+                    
+                    <li class="w-50-ns ph1-ns flex">
+                    
+                        {{ .Render "li" }}
+                    
+                    </li>
+                    
+                {{ end }}
+
+            </ul>
+
+    </div>
+    
+{{ end }}
