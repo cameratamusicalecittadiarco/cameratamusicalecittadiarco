@@ -1,7 +1,7 @@
 ---
 title: Camerata Musicale Città di Arco
 subtitle: Camerata Musicale Città di Arco
-image: /img/logo-cameratamusicalecittadiarco.jpeg
+image: /img/orchestra.jpg
 ---
 <!-- https://tachyons.io/ -->
 
