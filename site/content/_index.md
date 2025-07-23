@@ -1,8 +1,7 @@
 ---
 title: Castel Corno
 subtitle: Scuola di Alpinismo, Scialpinismo e Arrampicata Libera
-image: img/191206941.jpg
-# logo: img/logocastelcorno-notext.png
+image: /img/logo-cameratamusicalecittadiarco.jpeg
 ---
 <!-- https://tachyons.io/ -->
 
@@ -10,12 +9,16 @@ image: img/191206941.jpg
 {.pa1 .w-100} -->
 
 <img src="img/logo-sat.png" alt="CAI - SAT" title="CAI - SAT" height="100px" style="padding: 10px">
-<!-- ![CAI SAT](img/logo-sat.png "CAI SAT")
+<!-- !\\\[CAI SAT](img/logo-sat.png "CAI SAT")
 {.w-50} -->
 
 CAI SAT Rovereto e Mori
 {.pa2 .w4}
 
 <!-- <img src="img/logocastelcorno.png" alt="Scuola Castel Corno" title="Scuola Castel Corno" height="100px" style="padding: 10px"> -->
-<!-- ![Scuola Castel Corno](img/logocastelcorno.png "Scuola Castel Corno") -->
+
+<!-- !\\\[Scuola Castel Corno](img/logo_cameratacittadiarco.png "Scuola Castel Corno") -->
+
+![](/img/logo-cameratamusicalecittadiarco.jpeg "Camerata Musicale Città di Arco")
+
 <!-- {.w-50} -->
