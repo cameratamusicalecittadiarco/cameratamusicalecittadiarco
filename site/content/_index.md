@@ -1,6 +1,6 @@
 ---
-title: Castel Corno
-subtitle: Scuola di Alpinismo, Scialpinismo e Arrampicata Libera
+title: Camerata Musicale Città di Arco
+subtitle: Camerata Musicale Città di Arco
 image: /img/logo-cameratamusicalecittadiarco.jpeg
 ---
 <!-- https://tachyons.io/ -->
