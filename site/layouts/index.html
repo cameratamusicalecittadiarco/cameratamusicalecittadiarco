@@ -35,27 +35,29 @@
             {{ range (where .Site.RegularPages "Section" "organico") }}
                 {{ if ne .File.BaseFileName "_index" }}
                     <div class="w-100 w-third-ns ph2 mb4">
-                        <div class="bg-white pa3 tc shadow-1">
-                            <!-- Container per immagine con fallback -->
-                            <div class="w3 h3 br-100 mb3 center db relative">
-                                {{ if .Params.image }}
-                                    <img src="{{ .Params.image }}" alt="{{ .Title }}" class="w-100 h-100 br-100 cover profile-img" onload="this.nextElementSibling.classList.add('dn')" onerror="this.classList.add('dn'); this.nextElementSibling.classList.remove('dn')"/>
-                                {{ end }}
-                                <!-- Immagine di profilo anonima (sempre presente come fallback) -->
-                                <div class="w-100 h-100 br-100 bg-light-gray flex items-center justify-center absolute top-0 left-0 {{ if .Params.image }}dn{{ end }}">
-                                    <svg class="w2 h2 gray" fill="currentColor" viewBox="0 0 24 24">
-                                        <path d="M12 12c2.21 0 4-1.79 4-4s-1.79-4-4-4-4 1.79-4 4 1.79 4 4 4zm0 2c-2.67 0-8 1.34-8 4v2h16v-2c0-2.66-5.33-4-8-4z"/>
-                                    </svg>
+                        <a href="{{ .RelPermalink }}" class="no-underline">
+                            <div class="bg-white pa3 tc shadow-1 hover-shadow-2 transition-all">
+                                <!-- Container per immagine con fallback -->
+                                <div class="w3 h3 br-100 mb3 center db relative">
+                                    {{ if .Params.image }}
+                                        <img src="{{ .Params.image }}" alt="{{ .Title }}" class="w-100 h-100 br-100 cover profile-img" onload="this.nextElementSibling.classList.add('dn')" onerror="this.classList.add('dn'); this.nextElementSibling.classList.remove('dn')"/>
+                                    {{ end }}
+                                    <!-- Immagine di profilo anonima (sempre presente come fallback) -->
+                                    <div class="w-100 h-100 br-100 bg-light-gray flex items-center justify-center absolute top-0 left-0 {{ if .Params.image }}dn{{ end }}">
+                                        <svg class="w2 h2 gray" fill="currentColor" viewBox="0 0 24 24">
+                                            <path d="M12 12c2.21 0 4-1.79 4-4s-1.79-4-4-4-4 1.79-4 4 1.79 4 4 4zm0 2c-2.67 0-8 1.34-8 4v2h16v-2c0-2.66-5.33-4-8-4z"/>
+                                        </svg>
+                                    </div>
                                 </div>
+                                <h3 class="f5 serif dark-gray lh-title mb1">{{ .Title }}</h3>
+                                {{ if .Params.ruolo }}
+                                    <p class="f6 gray mb1">{{ .Params.ruolo }}</p>
+                                {{ end }}
+                                {{ if .Params.strumento }}
+                                    <p class="f7 gray ttu tracked">{{ .Params.strumento }}</p>
+                                {{ end }}
                             </div>
-                            <h3 class="f5 serif dark-gray lh-title mb1">{{ .Title }}</h3>
-                            {{ if .Params.ruolo }}
-                                <p class="f6 gray mb1">{{ .Params.ruolo }}</p>
-                            {{ end }}
-                            {{ if .Params.strumento }}
-                                <p class="f7 gray ttu tracked">{{ .Params.strumento }}</p>
-                            {{ end }}
-                        </div>
+                        </a>
                     </div>
                 {{ end }}
             {{ end }}

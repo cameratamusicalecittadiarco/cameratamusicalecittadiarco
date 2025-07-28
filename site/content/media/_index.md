@@ -1,7 +1,5 @@
 ---
 title: "Media"
-subtitle: "La nostra presenza musicale nel tempo"
-image: /img/orchestra.jpg
 ---
 
 ## Registrazioni Discografiche
