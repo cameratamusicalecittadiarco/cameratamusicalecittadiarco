@@ -1,7 +1,9 @@
 <a href="{{ .RelPermalink }}" class="no-underline pa3 bg-grey-1 br1 mb2 db raise w-100">
+	{{ if .Params.image }}
 	<div class="w-100-l ph2-l">
 		<img src="{{.Params.image}}" alt="" class="mb3">
 	</div>
+	{{ end }}
 	<h2 class="f3 b lh-title mb1 primary">{{ .Title }}</h2>
 	{{ if and (.Params.start) (.Params.end) }}
 		<p class="mid-gray lh-title mb2">

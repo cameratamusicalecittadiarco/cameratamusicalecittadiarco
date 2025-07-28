@@ -1,55 +1,49 @@
-<footer class="bg-black ph3 pv4 white">
+<footer class="bg-black ph3 pv5 white">
 
-	<div class="mw7 center pt3">
+	<div class="mw7 center">
 
-		<div class="measure-narrow center mb4">
-
-			<img src="/img/logo-cameratamusicalecittadiarco.jpeg" alt="Camerata Musicale Città di Arco" class="db w4 center mb4 br0">
-
-			<!-- <p class="f3 lh-title light-gray b tc mb2">{{ .Site.Data.footer.title }}</p>
-			<p>{{ .Site.Data.footer.blurb }}</p> -->
-
-
-			<!-- {{ partial "newsletter-form" . }} -->
-
+		<div class="tc mb5">
+			<img src="/img/logo-cameratamusicalecittadiarco.jpeg" alt="Camerata Musicale Città di Arco" class="db w3 center mb3 br2 shadow-1">
+			<h3 class="f4 serif white tracked">Camerata Musicale Città di Arco</h3>
 		</div>
 
 		<div class="flex-ns justify-between">
 
-			<div>
-				<h3 class="f4 b lh-title mb1 primary">Camerata Musicale</h3>
-				<ul class="mb3">
-					<li><a href="/" class="link">Home</a></li>
-					<li><a href="/organico" class="link">Organico</a></li>
-					<li><a href="/post" class="link">Stampa</a></li>
-					<li><a href="/contact" class="link">Contatti</a></li>
+			<div class="mb4 mb0-ns">
+				<h3 class="f5 serif white lh-title mb3 bb b--gray pb2">Navigazione</h3>
+				<ul class="list ma0 pa0">
+					<li class="mb2"><a href="/" class="f6 no-underline light-gray dim">Home</a></li>
+					<li class="mb2"><a href="/biografia" class="f6 no-underline light-gray dim">Biografia</a></li>
+					<li class="mb2"><a href="/organico" class="f6 no-underline light-gray dim">Organico</a></li>
+					<li class="mb2"><a href="/post" class="f6 no-underline light-gray dim">Stampa</a></li>
+					<li class="mb2"><a href="/contact" class="f6 no-underline light-gray dim">Contatti</a></li>
 				</ul>
 			</div>
 
-			<!-- Stampa -->
-			<div>
-				<h3 class="f4 b lh-title mb1 primary">Stampa</h3>
-				<ul class="mb3">
-					{{ with .Site.GetPage "section" "post" }}
-        				{{ range last 1 (sort .Sections "Permalink") }}
-							{{ range .Pages }}
-								<li><a href="{{ .Permalink }}" class="link">{{ .Title }}</a></li>
-							{{ end }}
-						{{ end }}
+			<!-- Ultimi Post -->
+			<div class="mb4 mb0-ns">
+				<h3 class="f5 serif white lh-title mb3 bb b--gray pb2">Ultimi Post</h3>
+				<ul class="list ma0 pa0">
+					{{ range first 4 (where .Site.RegularPages "Type" "post") }}
+						<li class="mb2"><a href="{{ .Permalink }}" class="f6 no-underline light-gray dim">{{ .Title }}</a></li>
 					{{ end }}
 				</ul>
 			</div>
 
-			<div>
-				<h3 class="f4 b lh-title mb2 primary">Contatti</h3>
-				<ul class="mhn2">
+			<div class="mb4 mb0-ns">
+				<h3 class="f5 serif white lh-title mb3 bb b--gray pb2">Seguici</h3>
+				<div class="flex">
 					{{ partial "social-icon" (dict "link" "https://www.facebook.com/cameratamusicale" "svg" "icons-facebook" "alt" "Camerata Musicale on Facebook") }}
 					{{ partial "social-icon" (dict "link" "https://www.instagram.com/cameratamusicale" "svg" "icons-instagram" "alt" "Camerata Musicale on Instagram") }}
 					{{ partial "social-icon" (dict "link" "https://www.youtube.com/@cameratamusicale" "svg" "icons-youtube" "alt" "Camerata Musicale on YouTube") }}
 					{{ partial "social-icon" (dict "link" "mailto:info@cameratamusicale.it" "svg" "icons-mail" "alt" "Camerata Musicale mail") }}
-				</ul>
+				</div>
 			</div>
 
+		</div>
+		
+		<div class="bt b--gray pt4 mt5 tc">
+			<p class="f6 light-gray">&copy; {{ now.Format "2006" }} Camerata Musicale Città di Arco. Tutti i diritti riservati.</p>
 		</div>
 	</div>
 

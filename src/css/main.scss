@@ -88,6 +88,87 @@
 /* Uncomment out the line below to help debug layout issues */
 /*@use './imports/_debug';*/
 
+/* Custom Styles - Inspired by lucreziaslomp.com */
+@import url('https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,600;1,300;1,400&family=Lato:wght@300;400;600&display=swap');
+
+body {
+  font-family: 'Lato', -apple-system, BlinkMacSystemFont, sans-serif;
+  font-weight: 300;
+  line-height: 1.6;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-family: 'Cormorant Garamond', serif;
+  font-weight: 400;
+}
+
+.serif {
+  font-family: 'Cormorant Garamond', serif;
+}
+
+.hero-section {
+  background: #fafafa;
+  min-height: 100vh;
+}
+
+.shadow-1 {
+  box-shadow: 0 2px 8px rgba(0,0,0,0.05);
+}
+
+.shadow-2 {
+  box-shadow: 0 4px 16px rgba(0,0,0,0.08);
+}
+
+.tracked-tight {
+  letter-spacing: -0.025em;
+}
+
+.gold {
+  color: #b8860b;
+}
+
+.b--gold {
+  border-color: #b8860b;
+}
+
+.bg-gold {
+  background-color: #b8860b;
+}
+
+.transition {
+  transition: all 0.3s ease;
+}
+
+.hover-gold:hover {
+  color: #b8860b;
+}
+
+.hover-bg-gold:hover {
+  background-color: #b8860b;
+  color: white;
+}
+
+/* Navigation styles */
+#navbar {
+  transition: all 0.3s ease;
+}
+
+/* Minimal button styles */
+.btn-minimal {
+  background: transparent;
+  border: 1px solid #333;
+  padding: 0.75rem 1.5rem;
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+  font-size: 0.875rem;
+  transition: all 0.3s ease;
+}
+
+.btn-minimal:hover {
+  background: #333;
+  color: white;
+}
+
 /* Aspect ratio utilities */
 .aspect-ratio {
   height: 0;

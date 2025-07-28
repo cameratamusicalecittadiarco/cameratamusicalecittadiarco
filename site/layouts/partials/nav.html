@@ -1,29 +1,54 @@
-<nav id="nav" data-nav class="fixed w-100" style="z-index: 100;">
-<div class="mw8 flex flex-wrap justify-between items-center center">
+<nav class="fixed top-0 w-100 z-999 bg-white shadow-1" id="navbar">
+<div class="mw8 center ph3 pv3">
+	<div class="flex items-center justify-between">
 
-	<a href="/" class="pa1 db h-100 w6 flex-none no-underline flex items-center">
+	<a href="/" class="flex items-center no-underline">
 		<!-- Logo -->
-		<img src="/img/logo-cameratamusicalecittadiarco.jpeg" alt="Logo" class="ml3 db mb0 h2"/>
+		<img src="/img/logo-cameratamusicalecittadiarco.jpeg" alt="Logo" class="h2 mr2"/>
 		<!-- Title -->
-		<h1 class="ml3 f4 tracked-ns">Camerata Musicale Città di Arco</h1>
+		<h1 class="f4 dark-gray serif tracked ma0">Camerata Musicale Città di Arco</h1>
 	</a>
 	
 	<!-- Mobile Menu Container -->
-	<div data-mobile-menu class="mobile-menu-container">
-		<svg viewBox="0 0 100 80" width="40" height="25" class="mobile-menu-icon">
-			<rect class="menu-icon-top mobile-menu-inner" width="100" height="8"></rect>
-			<rect class="menu-icon-middle mobile-menu-inner" y="30" width="100" height="8"></rect>
-			<rect class="menu-icon-bottom mobile-menu-inner" y="60" width="100" height="8"></rect>
-		</svg>
+	<div class="db dn-ns">
+		<button class="mobile-nav-trigger bg-transparent bn pa2 dark-gray">
+			<span class="f4">☰</span>
+		</button>
 	</div>
 	
 	<!-- Nav Menu -->
-	<ul class="flex b grey-3 nav-menu">
-		<li><a href="/" class="mh3 mv2 no-underline db bg-primary">Home</a></li>
-		<li><a href="/organico" class="mh3 mv2 no-underline db bg-primary">Organico</a></li>
-		<li><a href="/post" class="mh3 mv2 no-underline db bg-primary">Stampa</a></li>
-		<li><a href="/contact" class="mh3 mv2 no-underline db bg-primary">Contatti</a></li>
+	<ul class="dn flex-ns items-center list ma0 pa0">
+		<li class="mr3"><a href="/biografia" class="f6 no-underline dark-gray dim ttu tracked">Biografia</a></li>
+		<li class="mr3"><a href="/organico" class="f6 no-underline dark-gray dim ttu tracked">Organico</a></li>
+		<li class="mr3"><a href="/post" class="f6 no-underline dark-gray dim ttu tracked">Stampa</a></li>
+		<li><a href="/contact" class="f6 no-underline dark-gray dim ttu tracked">Contatti</a></li>
 	</ul>
 	
+	</div>
+</div>
+
+<!-- Mobile navigation -->
+<div class="mobile-nav dn bg-white bt b--light-gray">
+	<div class="pv3 ph3">
+		<a href="/biografia" class="db f5 no-underline dark-gray pv2 bb b--light-gray">Biografia</a>
+		<a href="/organico" class="db f5 no-underline dark-gray pv2 bb b--light-gray">Organico</a>
+		<a href="/post" class="db f5 no-underline dark-gray pv2 bb b--light-gray">Stampa</a>
+		<a href="/contact" class="db f5 no-underline dark-gray pv2">Contatti</a>
+	</div>
 </div>
 </nav>
+
+<script>
+// Mobile nav toggle inline
+document.addEventListener('DOMContentLoaded', function() {
+    const trigger = document.querySelector('.mobile-nav-trigger');
+    const nav = document.querySelector('.mobile-nav');
+    
+    if (trigger && nav) {
+        trigger.addEventListener('click', function(e) {
+            e.preventDefault();
+            nav.classList.toggle('dn');
+        });
+    }
+});
+</script>

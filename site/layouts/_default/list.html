@@ -1,8 +1,15 @@
 {{ define "main" }}
 
-    {{ partial "jumbotron" (dict "imageUrl" .Params.image "title" .Title "subtitle" "stagione") }}
+    {{ partial "jumbotron" (dict "imageUrl" .Params.image "title" .Title) }}
 
     <div class="ph3 pv4 mw7 center">
+
+            <!-- Body -->
+            {{ if .Content }}
+                <div class="f5 lh-copy gray">
+                    {{ .Content }}
+                </div>
+            {{ end }}
         
             <ul id="blog-list" class="flex-ns flex-wrap mhn1-ns pa3">
         

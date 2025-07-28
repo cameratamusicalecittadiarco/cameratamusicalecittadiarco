@@ -1,51 +1,98 @@
 {{ define "main" }}
 
-{{ partial "jumbotron" (dict "logo" .Params.logo "imageUrl" .Params.image "title" .Title "subtitle" .Params.subtitle) }}
+{{ partial "jumbotron" (dict "imageUrl" .Params.image "title" .Title "subtitle" .Params.subtitle) }}
 
-<!-- Logo e intro -->
-<!-- <div class="bg-grey-1 pv4">
-    <div class="flex-l mhn1-l ph3 center mw7" style="display: flex">
-        {{ .Content }}
-    </div>
-</div> -->
-
-<!-- Biografia -->
-<div class="bg-off-white pt4">
-    <div class="ph3 mw7 center">
-        <h2 class="f2 b lh-title mb3">{{ (.Site.GetPage "/biografia").Title }}</h2>
-		{{ (.Site.GetPage "/biografia").Content }}
-	</div>
-</div>
-
-<!-- Biografia -->
-{{ partial "short-text" (dict "heading" (.Site.GetPage "/biografia/").Title "text" (.Site.GetPage "/biografia/").Content "image" (.Site.GetPage "/biografia/").Params.image "buttonText" "Read more" "buttonLink" "/biografia") }}
-
-<!-- Organico -->
-<div class="bg-near-white pv5">
-    <div class="mw7 center ph3">
-        <div class="tc mb4">
-            <h2 class="f2 tracked-tight dark-gray lh-title mb3">Il Nostro Organico</h2>
-            <p class="f4 gray lh-copy mw6 center">
-                Incontra i musicisti professionisti che compongono la Camerata Musicale Città di Arco
-            </p>
+<!-- Sezione Biografia -->
+<section class="pv5 bg-white">
+    <div class="center mw7 ph3">
+        {{ $biografia := .Site.GetPage "/biografia" }}
+        <div class="flex-l mhn2-l items-center">
+            <div class="w-50-l ph2-l">
+                <h2 class="f2 serif dark-gray lh-title mb3">{{ $biografia.Title }}</h2>
+                <div class="f4 lh-copy gray serif mb4">
+                    {{ $biografia.Summary }}
+                </div>
+                <a href="/biografia" class="f6 no-underline dark-gray dim ttu tracked bb b--dark-gray">Scopri di più</a>
+            </div>
+            <div class="w-50-l ph2-l">
+                {{ if $biografia.Params.image }}
+                    <img src="{{ $biografia.Params.image }}" alt="{{ $biografia.Title }}" class="w-100 shadow-2"/>
+                {{ else }}
+                    <img src="/img/biografia-hero.jpg" alt="Storia della Camerata" class="w-100 shadow-2"/>
+                {{ end }}
+            </div>
         </div>
+    </div>
+</section>
+
+<!-- Sezione Organico -->
+<section class="pv5 bg-near-white">
+    <div class="center mw7 ph3">
+        <h2 class="f2 serif dark-gray lh-title mb4 tc">I nostri musicisti</h2>
         
-        <div class="flex-ns flex-wrap">
-            {{ with .Site.GetPage "section" "organico" }}
-                {{ range first 6 (sort .Pages "Weight") }}
-                    {{ partial "organico-card" . }}
+        <!-- Griglia membri organico -->
+        <div class="flex flex-wrap mhn2">
+            {{ range (where .Site.RegularPages "Section" "organico") }}
+                {{ if ne .File.BaseFileName "_index" }}
+                    <div class="w-100 w-third-ns ph2 mb4">
+                        <div class="bg-white pa3 tc shadow-1">
+                            <!-- Container per immagine con fallback -->
+                            <div class="w3 h3 br-100 mb3 center db relative">
+                                {{ if .Params.image }}
+                                    <img src="{{ .Params.image }}" alt="{{ .Title }}" class="w-100 h-100 br-100 cover profile-img" onload="this.nextElementSibling.classList.add('dn')" onerror="this.classList.add('dn'); this.nextElementSibling.classList.remove('dn')"/>
+                                {{ end }}
+                                <!-- Immagine di profilo anonima (sempre presente come fallback) -->
+                                <div class="w-100 h-100 br-100 bg-light-gray flex items-center justify-center absolute top-0 left-0 {{ if .Params.image }}dn{{ end }}">
+                                    <svg class="w2 h2 gray" fill="currentColor" viewBox="0 0 24 24">
+                                        <path d="M12 12c2.21 0 4-1.79 4-4s-1.79-4-4-4-4 1.79-4 4 1.79 4 4 4zm0 2c-2.67 0-8 1.34-8 4v2h16v-2c0-2.66-5.33-4-8-4z"/>
+                                    </svg>
+                                </div>
+                            </div>
+                            <h3 class="f5 serif dark-gray lh-title mb1">{{ .Title }}</h3>
+                            {{ if .Params.ruolo }}
+                                <p class="f6 gray mb1">{{ .Params.ruolo }}</p>
+                            {{ end }}
+                            {{ if .Params.strumento }}
+                                <p class="f7 gray ttu tracked">{{ .Params.strumento }}</p>
+                            {{ end }}
+                        </div>
+                    </div>
                 {{ end }}
             {{ end }}
         </div>
         
         <div class="tc mt4">
-            <a href="/organico" class="f5 tracked ttu gold no-underline dim pa3 ba b--gold">Conosci tutto l'organico</a>
+            <a href="/organico" class="f6 no-underline dark-gray dim ttu tracked bb b--dark-gray">Scopri tutto l'ensemble</a>
         </div>
     </div>
-</div>
+</section>
 
-<!-- Blog -->
-{{ partial "blog" . }}
-
+<!-- Sezione Stampa/Blog -->
+<section class="pv5 bg-white">
+    <div class="center mw7 ph3">
+        <h2 class="f2 serif dark-gray lh-title mb4 tc">Comunicazioni recenti</h2>
+        
+        <div class="flex-ns mhn2-ns">
+            {{ range first 3 (where .Site.RegularPages "Type" "post") }}
+                <div class="w-third-ns ph2-ns mb4">
+                    <article class="bg-near-white pa3 shadow-1">
+                        {{ if .Params.image }}
+                            <img src="{{ .Params.image }}" alt="{{ .Title }}" class="w-100 mb3"/>
+                        {{ end }}
+                        <h3 class="f4 serif dark-gray lh-title mb2">
+                            <a href="{{ .Permalink }}" class="no-underline dark-gray">{{ .Title }}</a>
+                        </h3>
+                        <p class="f5 gray lh-copy mb3">{{ .Summary }}</p>
+                        <div class="f6 gray">{{ .Date.Format "2 January 2006" }}</div>
+                    </article>
+                </div>
+            {{ end }}
+        </div>
+        
+        <div class="tc mt4">
+            <a href="/post" class="f6 no-underline dark-gray dim ttu tracked bb b--dark-gray">Tutte le comunicazioni</a>
+        </div>
+    </div>
+</section>
 
 {{ end }}
