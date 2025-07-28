@@ -2,28 +2,44 @@
 
     {{ partial "jumbotron" (dict "imageUrl" .Params.image "title" .Title) }}
 
-    <div class="ph3 pv4 mw7 center">
+    <div class="ph3 pv5 mw7 center">
 
-            <!-- Body -->
-            {{ if .Content }}
-                <div class="f5 lh-copy gray">
-                    {{ .Content }}
-                </div>
+        <!-- Body -->
+        {{ if .Content }}
+            <div class="f4 lh-copy gray serif mb5 tc">
+                {{ .Content }}
+            </div>
+        {{ end }}
+    
+        <!-- Lista articoli con stile minimalista -->
+        <div class="bt b--light-gray">
+            {{ range .Pages }}
+                <article class="bb b--light-gray pv4">
+                    <div class="flex-l items-start justify-between">
+                        {{ if .Params.image }}
+                            <div class="w-30-l pl3-l mt3 mt0-l">
+                                <div class="h2 overflow-hidden">
+                                    <img src="{{ .Params.image }}" alt="{{ .Title }}" class="w-100 h-100 cover shadow-1" style="object-fit: cover;"/>
+                                </div>
+                            </div>
+                        {{ end }}
+                        <div class="w-70-l pr4-l">
+                            <h2 class="f3 serif dark-gray lh-title mb2 mt0">
+                                <a href="{{ .RelPermalink }}" class="no-underline dark-gray hover-black">
+                                    {{ .Title }}
+                                </a>
+                            </h2>
+                            <div class="f6 gray ttu tracked mb3">
+                                {{ .Date.Format "2 January 2006" }}
+                            </div>
+                            {{ if .Summary }}
+                                <p class="f5 lh-copy gray serif mb3">{{ .Summary }}</p>
+                            {{ end }}
+                        </div>
+                    </div>
+                </article>
             {{ end }}
-        
-            <ul id="blog-list" class="flex-ns flex-wrap mhn1-ns pa3">
-        
-                {{ range .Pages }}
-                    
-                    <li class="w-50-ns ph1-ns flex">
-                    
-                        {{ .Render "li" }}
-                    
-                    </li>
-                    
-                {{ end }}
-
-            </ul>
+        </div>
 
     </div>
     

@@ -9,7 +9,10 @@ function toggleMobileMenu() {
   nav.classList.toggle("menu-open");
 }
 
-mobileMenu.addEventListener("click", toggleMobileMenu);
+// Aggiungi event listener solo se l'elemento esiste
+if (mobileMenu && nav) {
+  mobileMenu.addEventListener("click", toggleMobileMenu);
+}
 
 // Say hello
 // eslint-disable-next-line no-console
