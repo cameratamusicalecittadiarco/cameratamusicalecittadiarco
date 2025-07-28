@@ -1,0 +1,38 @@
+<div class="w-third-l w-50-m w-100 pa3">
+    <article class="bg-white br3 shadow-1 overflow-hidden h-100 flex flex-column">
+        {{ if .Params.image }}
+            <div class="aspect-ratio aspect-ratio--1x1">
+                <img src="{{ .Params.image }}" alt="{{ .Title }}" class="aspect-ratio--object cover"/>
+            </div>
+        {{ else }}
+            <div class="aspect-ratio aspect-ratio--1x1 bg-light-gray relative">
+                <div class="aspect-ratio--object flex items-center justify-center">
+                    <div class="w3 h3 br-100 bg-gray flex items-center justify-center">
+                        <span class="f2 white">👤</span>
+                    </div>
+                </div>
+            </div>
+        {{ end }}
+        
+        <div class="pa3 flex-auto flex flex-column">
+            <h3 class="f4 dark-gray lh-title mb2 mt0">{{ .Params.nome }}</h3>
+            
+            {{ if .Params.ruolo }}
+                <p class="f6 gray mb3">{{ .Params.ruolo }}</p>
+            {{ end }}
+            
+            <!-- {{ if .Summary }}
+                <div class="f6 gray lh-copy mb3 flex-auto">
+                    {{ .Summary }}
+                </div>
+            {{ end }} -->
+            
+            <div class="mt-auto">
+                {{ if .Content }}
+                    <a href="{{ .Permalink }}" class="f6 tracked ttu gold no-underline dim">Scopri di più →</a>
+                {{ end }}
+            </div>
+
+        </div>
+    </article>
+</div>

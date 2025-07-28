@@ -9,39 +9,45 @@
     </div>
 </div>
 
-<!-- Titolo sezione corsi -->
+<!-- Biografia -->
 <!-- <div class="bg-off-white pt4">
-	<div class="ph3 mw7 center">
-		<h2 class="f2 b lh-title mb3">{{ (.Site.GetPage "/corsi").Title }}</h2>
-		{{ (.Site.GetPage "/corsi").Content }}
+    <div class="ph3 mw7 center">
+        <h2 class="f2 b lh-title mb3">{{ (.Site.GetPage "/biografia").Title }}</h2>
+		{{ (.Site.GetPage "/biografia").Content }}
 	</div>
 </div> -->
 
-<!-- Corsi -->
-<div class="mw7 center pt4">
-    {{ with .Site.GetPage "section" "corsi" }}
-        {{ range last 1 (sort .Sections "Permalink") }}
-            <div class="ph3">
-                <h2 class="f2 b lh-title mb3">{{ .Title }}</h2>
-                {{ .Content }}
-            </div>
-            <ul id="blog-list" class="flex-ns flex-wrap mhn1-ns pa3">
-                    {{ range .Pages }}
-                        <li class="w-50-ns ph1-ns flex">
-                            {{ .Render "li"}}
-                        </li>
-                    {{ end }}
-            </ul>
-        {{ end }}
-    {{ end }}
+<!-- Biografia -->
+{{ partial "short-text" (dict "heading" (.Site.GetPage "/biografia/").Title "text" (.Site.GetPage "/biografia/").Content "image" (.Site.GetPage "/biografia/").Params.image "buttonText" "Read more" "buttonLink" "/biografia") }}
+
+<!-- Organico -->
+<div class="bg-near-white pv5">
+    <div class="mw7 center ph3">
+        <div class="tc mb4">
+            <h2 class="f2 tracked-tight dark-gray lh-title mb3">Il Nostro Organico</h2>
+            <p class="f4 gray lh-copy mw6 center">
+                Incontra i musicisti professionisti che compongono la Camerata Musicale Città di Arco
+            </p>
+        </div>
+        
+        <div class="flex-ns flex-wrap">
+            {{ with .Site.GetPage "section" "organico" }}
+                {{ range first 6 (sort .Pages "Weight") }}
+                    {{ partial "organico-card" . }}
+                {{ end }}
+            {{ end }}
+        </div>
+        
+        <div class="tc mt4">
+            <a href="/organico" class="f5 tracked ttu gold no-underline dim pa3 ba b--gold">Conosci tutto l'organico</a>
+        </div>
+    </div>
 </div>
 
-{{ partial "short-text" (dict "heading" (.Site.GetPage "/scuola/").Title "text" (.Site.GetPage "/scuola/").Content "image" (.Site.GetPage "/scuola/").Params.image "buttonText" "Read more" "buttonLink" "/scuola") }}
-
-{{ partial "organico" .Site.Data.organico }}
+<!-- {{ partial "organico" .Site.Data.organico }} -->
 
 <!-- Blog -->
-<!-- {{ partial "blog" . }} -->
+{{ partial "blog" . }}
 
 
 {{ end }}
