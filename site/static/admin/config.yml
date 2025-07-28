@@ -63,6 +63,7 @@ collections: # A list of collections the CMS should be able to edit
     public_folder: "/img"
     create: true # Allow users to create new documents in this collection
     fields: # The fields each document in this collection have
+      - { label: Title, name: title, widget: string }
       - { label: Nome, name: nome, widget: string }
       - { label: Ruolo, name: ruolo, widget: string }
       - { label: Image, name: image, widget: image }

@@ -83,6 +83,7 @@
 .nav-transparent {
     transition: background-color 0.2s ease-out;
     background-color: transparent;
+    color: transparent;
     padding: var(--spacing-small) 0 var(--spacing-small) 0;
     position: absolute;
 }

@@ -1,6 +1,6 @@
 ---
-title: Camerata Musicale
-subtitle: Città di Arco
+title: Camerata Musicale Città di Arco
+subtitle: dal 1993 - Trentino-Alto Adige, Italia
 image: /img/orchestra.jpg
 ---
 <!-- https://tachyons.io/ -->

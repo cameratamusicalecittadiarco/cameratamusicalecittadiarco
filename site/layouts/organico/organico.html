@@ -1,28 +1,60 @@
 {{ define "main" }}
 
-    {{ partial "jumbotron" (dict "imageUrl" .Params.image "title" .Title "subtitle" "Vecchi e nuovi") }}
+    {{ partial "jumbotron" (dict "imageUrl" .Params.image "title" .Title "subtitle" "-") }}
 
     <div class="ph3 pv4 mw7 center">
         
-        {{ range (sort .Pages "Permalink").Reverse }}
+        {{ range sort .Pages "Weight" }}
 
-            <a href="{{ .Permalink }}">
-                <h2 class="f2 b lh-title mb3">{{ .Title }}</h2>
-            </a>
-            
-            {{ .Content }}
-            
-            <ul id="blog-list" class="flex-ns flex-wrap mhn1-ns pa3">
-        
-                {{ range .Pages }}
+            <div class="flex items-start mb4 pb4 bb b--light-gray">
+                
+                <!-- Immagine -->
+                <div class="w3 h3 mr3 flex-shrink-0">
+                    {{ $imagePath := .Params.image }}
+                    {{ $imageExists := false }}
+                    {{ if $imagePath }}
+                        {{ $imageResource := resources.Get (strings.TrimPrefix "/" $imagePath) }}
+                        {{ if $imageResource }}
+                            {{ $imageExists = true }}
+                        {{ else }}
+                            {{ $staticImage := fileExists (printf "static%s" $imagePath) }}
+                            {{ if $staticImage }}
+                                {{ $imageExists = true }}
+                            {{ end }}
+                        {{ end }}
+                    {{ end }}
                     
-                    <li class="w-50-ns ph1-ns flex">
-                        {{ .Render "li" }}
-                    </li>
+                    {{ if and .Params.image $imageExists }}
+                        <img src="{{ .Params.image }}" alt="{{ .Title }}" class="w-100 h-100 br-100 cover"/>
+                    {{ else }}
+                        <div class="w-100 h-100 br-100 bg-light-gray flex items-center justify-center">
+                            <div class="w2 h2 br-100 bg-gray flex items-center justify-center">
+                                <span class="f6 white">👤</span>
+                            </div>
+                        </div>
+                    {{ end }}
+                </div>
+                
+                <!-- Contenuto -->
+                <div class="flex-auto">
+                    <a href="{{ .Permalink }}" class="no-underline">
+                        <h2 class="f2 b lh-title mb2 dark-gray hover-gold">{{ .Title }}</h2>
+                    </a>
                     
-                {{ end }}
-
-            </ul>
+                    {{ if .Params.ruolo }}
+                        <p class="f5 gold mb3">{{ .Params.ruolo }}</p>
+                    {{ end }}
+                    
+                    <!-- {{ if .Params.strumento }}
+                        <p class="f6 gray mb3">{{ .Params.strumento }}</p>
+                    {{ end }} -->
+                    
+                    <div class="f5 lh-copy gray">
+                        {{ .Content }}
+                    </div>
+                </div>
+                
+            </div>
 
         {{ end }}
 
