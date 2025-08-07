@@ -46,3 +46,29 @@ Daniele Grott - Pietro Righi - Riccardo Terrin\
 Diego Ricci - Tiziano Gonnella\
 **Organo, clavicembalo e basso continuo:** \
 Alessandro Giannotti (Maestro preparatore) - Antonio Vicentini
+
+***Nel tempo hanno collaborato anche:***\
+*Violino*\
+Aldrighetti Nicola, Baroni Daniele, Barzon Lorenzo, Broz Barbara, Broz Giada, Bruschetti Maura, Caldini Rosanna, Calzà Annalaura, Casera Lorenzo, Dalla Corte Anita, Demirci Daniel, Depentori Lino, Ferroni Andrea, Fulco Laura, Gelpi Claudio, Giordan Cecilia, Giordan Sergio, Lanz Sylvia, La Vaccara Sergio, La Vaccara Valeria, Manfrini Massimiliano, Manfrini Stefano, Michelini Renzo, Meneghelli Camilla, Polito Ruggero, Roveda Stefano, Santorum Claudio, Tanesini Marco, Turata Valentina, Turrini Massimo, Wassermann Johanna\
+*Viola*\
+Ambrogetti Francesco, Azzolini Luigi, Broz Giada, Bruschetti Maura, Defant Marcello, Degasperi Filippo, Fadanelli Nicola, Lutterotti Daniele, Manfrini Klaus, Mazzi Marco, Michelotti Fabrizio, Palfreder Barbara, Tognotti Enrica\
+*Violoncello*\
+Baroni Aurelio, Bellisario Christian, Broz Klaus, Brunelli Laura, Cainelli Dora, Dalbianco Marco, Dardo Elena, Kulichova Jana, Meledina Alberto, Zanoni Silvano\
+*Contrabbasso*\
+Mich Danilo, Pederzolli Cecilia, Pedrotti Alberto, Tovazzi Michele\
+*Basso Continuo (tastiera)*\
+Anselmi Armando, Battisti Tarcisio, Berardi Noemi, Bertassi Edoardo, Bisacchi Marianna, Cenini Carlo, Cumer Nicola, Lutterotti Daniele, Marchetti Paola, Pedrazzoli Carlo, Schinai Luca, Toccoli Enrico, Zamboni Anna\
+*Oboe*\
+Confortini Pierluigi, Masi Emanuele, Morandi Daria, Pombeni Fabio, Quaglioni Tommaso, Raspadori Carlo\
+*Fagotto*\
+Delaiti Igor, Fattori Michele, Pederzolli Costantina\
+*Flauto*\
+Lynch Tosca, Parisi Claudia, Tarolli Tiziano\
+*Clarinett*i\
+Bertassi Andrea, Cont Michele\
+*Tromba*\
+Barbera Mauro, Lorenzi Alessia, Morandi Omar, Profanter Tobias, Righi Augusto, Woerndle Eduard\
+*Corno*\
+Barbera Filippo, Garniga Roberto,Marzari Pierluigi, Moser Giuliano, Puliafito Franco, Simoncelli Massimo, Vergara Antonio\
+*Percussioni*\
+Fava Stefania, Liboni Michele, Tiella Gaetano
