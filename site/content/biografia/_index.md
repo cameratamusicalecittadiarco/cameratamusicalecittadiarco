@@ -1,5 +1,5 @@
 ---
-title: "Biografia"
+title: "L'orchestra"
 subtitle: "La storia della Camerata Musicale Città di Arco"
 image: /img/orchestra.jpg
 ---

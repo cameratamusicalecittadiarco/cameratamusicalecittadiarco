@@ -13,20 +13,22 @@
 				<h3 class="f5 serif white lh-title mb3 bb b--gray pb2">Navigazione</h3>
 				<ul class="list ma0 pa0">
 					<li class="mb2"><a href="/" class="f6 no-underline light-gray dim">Home</a></li>
-					<li class="mb2"><a href="/biografia" class="f6 no-underline light-gray dim">Biografia</a></li>
-					<li class="mb2"><a href="/organico" class="f6 no-underline light-gray dim">Organico</a></li>
-					<li class="mb2"><a href="/post" class="f6 no-underline light-gray dim">Stampa</a></li>
+					<li class="mb2"><a href="/biografia" class="f6 no-underline light-gray dim">L'orchestra</a></li>
+					<li class="mb2"><a href="/artisti" class="f6 no-underline light-gray dim">Artisti</a></li>
+					<li class="mb2"><a href="/post" class="f6 no-underline light-gray dim">News</a></li>
 					<li class="mb2"><a href="/contact" class="f6 no-underline light-gray dim">Contatti</a></li>
 				</ul>
 			</div>
 
 			<!-- Ultimi Post -->
 			<div class="mb4 mb0-ns">
-				<h3 class="f5 serif white lh-title mb3 bb b--gray pb2">Ultimi Post</h3>
+				<h3 class="f5 serif white lh-title mb3 bb b--gray pb2">News</h3>
 				<ul class="list ma0 pa0">
-					{{ range first 4 (where .Site.RegularPages "Type" "post") }}
+					{{ range first 3 (where .Site.RegularPages "Type" "post") }}
 						<li class="mb2"><a href="{{ .Permalink }}" class="f6 no-underline light-gray dim">{{ .Title }}</a></li>
 					{{ end }}
+						<li class="mb2">...</li>
+						<li class="mb2"><a href="/post" class="f6 no-underline light-gray dim">Vedi tutte</a></li>
 				</ul>
 			</div>
 

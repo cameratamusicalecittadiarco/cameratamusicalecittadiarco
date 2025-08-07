@@ -1,3 +1,3 @@
 ---
-title: Stampa
+title: News
 ---

@@ -65,12 +65,12 @@ export default class HomePreview extends React.Component {
           <div className="flex-l mhn2-l">
             
             <div className="w-60-l ph2-l">
-              <img src={getAsset(entry.getIn(["data", "organico", "image"]))} alt="" className="mb3"/>
+              <img src={getAsset(entry.getIn(["data", "artisti", "image"]))} alt="" className="mb3"/>
             </div>
 
             <div className="w-40-l ph2-l">
-              <h2 className="f2 b lh-title mb2">{entry.getIn(["data", "organico", "heading"])}</h2>
-              <div dangerouslySetInnerHTML={{ __html: marked(entry.getIn(["data", "organico", "text"])) }} />
+              <h2 className="f2 b lh-title mb2">{entry.getIn(["data", "artisti", "heading"])}</h2>
+              <div dangerouslySetInnerHTML={{ __html: marked(entry.getIn(["data", "artisti", "text"])) }} />
             </div>
 
           </div>

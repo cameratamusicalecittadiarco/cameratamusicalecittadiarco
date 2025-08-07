@@ -25,14 +25,14 @@
     </div>
 </section>
 
-<!-- Sezione Organico -->
+<!-- Sezione Artisti -->
 <section class="pv5 bg-near-white">
     <div class="center mw7 ph3">
-        <h2 class="f2 serif dark-gray lh-title mb4 tc">I nostri musicisti</h2>
+        <h2 class="f2 serif dark-gray lh-title mb4 tc">Artisti</h2>
         
-        <!-- Griglia membri organico -->
+        <!-- Griglia artisti -->
         <div class="flex flex-wrap mhn2">
-            {{ range (where .Site.RegularPages "Section" "organico") }}
+            {{ range (where .Site.RegularPages "Section" "artisti") }}
                 {{ if ne .File.BaseFileName "_index" }}
                     <div class="w-100 w-third-ns ph2 mb4">
                         <a href="{{ .RelPermalink }}" class="no-underline">
@@ -64,7 +64,7 @@
         </div>
         
         <div class="tc mt4">
-            <a href="/organico" class="f6 no-underline dark-gray dim ttu tracked bb b--dark-gray">Scopri tutto l'ensemble</a>
+            <a href="/artisti" class="f6 no-underline dark-gray dim ttu tracked bb b--dark-gray">Scopri tutti gli artisti che hanno collaborato con noi</a>
         </div>
     </div>
 </section>
@@ -72,7 +72,7 @@
 <!-- Sezione Stampa/Blog -->
 <section class="pv5 bg-white">
     <div class="center mw7 ph3">
-        <h2 class="f2 serif dark-gray lh-title mb4 tc">Comunicazioni recenti</h2>
+        <h2 class="f2 serif dark-gray lh-title mb4 tc">News recenti</h2>
         
         <div class="flex-ns mhn2-ns">
             {{ range first 3 (where .Site.RegularPages "Type" "post") }}
@@ -92,7 +92,7 @@
         </div>
         
         <div class="tc mt4">
-            <a href="/post" class="f6 no-underline dark-gray dim ttu tracked bb b--dark-gray">Tutte le comunicazioni</a>
+            <a href="/post" class="f6 no-underline dark-gray dim ttu tracked bb b--dark-gray">Tutte le news</a>
         </div>
     </div>
 </section>

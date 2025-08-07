@@ -39,7 +39,7 @@ collections: # A list of collections the CMS should be able to edit
           - {label: Body, name: body, widget: markdown}
       
       - file: "site/content/biografia/_index.md"
-        label: "Biografia"
+        label: "L'orchestra"
         name: "biografia"
         fields:
           - {label: Title, name: title, widget: string}
@@ -62,9 +62,9 @@ collections: # A list of collections the CMS should be able to edit
           - {label: Image, name: image, widget: image}
           - {label: Body, name: body, widget: markdown}
 
-  - name: "organico"
-    label: "Organico"
-    folder: "site/content/organico" # The path to the folder where the documents are stored
+  - name: "artisti"
+    label: "Artisti"
+    folder: "site/content/artisti" # The path to the folder where the documents are stored
     path: "{{slug}}/index" # Each document is inside a folder with the slug name.
     media_folder: "/site/static/img" # Folder where user uploaded files should go
     public_folder: "/img"
