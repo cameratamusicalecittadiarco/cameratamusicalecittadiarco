@@ -1,9 +1,9 @@
 ---
-title: "Demian Baraldi"
-nome: "Demian Baraldi"
-strumento: "Violino"
-ruolo: "Violinista"
-image: "/img/organico/demian-baraldi.jpg"
+title: Demian Baraldi
+nome: Demian Baraldi
+strumento: Violino
+ruolo: Violinista
+image: /img/demian-baraldi.png
 weight: 10
 ---
 
