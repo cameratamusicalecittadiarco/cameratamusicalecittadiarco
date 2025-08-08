@@ -40,6 +40,11 @@ All’intensissima attività concertistica affianca quella didattica.\
 Studia Direzione d’orchestra alla Civica Scuola Abbado di Milano (M°Rivolta) e si perfeziona all’Università della Musica di Vienna (M°Sieghart), a San Pietroburgo (M°Brett), in Francia con il M° Pehlivanian (sotto la cui guida ottiene il Postgraduate Degree presso il Conservatorio Superiore Gurska di Madrid, e del quale diventa poi Direttore Assistente).\
 Ha diretto prestigiosi ensembles, orchestre da camera e orchestre sinfoniche (German National Chamber Orchestra, Savaria Symphony Orchestra, Orquesta de Conservatorios de Madrid, Orquestra Simfònica de l’ESMUC, Kammerorchester Bach, St. Petersburg State Hermitage Orchestra). Nel 2015/16 debutta sul podio del Palais de Bozar di Bruxelles, della Gewandhaus di Lipsia e della Filarmonica di Berlino.
 
+**ALESSANDRO GIANNOTTI, direttore**\
+Ha studiato pianoforte e composizione al Conservatorio di Riva del Garda e Trento e direzione d’orchestra con Jorma Panula (Italia, Usa, Finlandia, Olanda).\
+Attivo come pianista in diverse formazioni cameristiche con concerti in Italia ed Europa, attualmente si dedica soprattutto alla composizione; sue esecuzioni in Europa e Usa.\
+È membro del collettivo di compositori Quadrivium di Riva del Garda TN. Ha collaborato alla realizzazione della rassegna di letteratura musica e video arte “Vociferazioni”.
+
 **SOLISTI** \
 **che si sono esibiti accompagnati dalla Camerata Musicale "Città di Arco"**
 
